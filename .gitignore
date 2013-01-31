@@ -2,3 +2,4 @@ dest
 download
 *.iso
 *.swp
+squashfs-root
