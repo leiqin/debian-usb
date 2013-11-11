@@ -34,21 +34,21 @@ testing-i386:dest/testing/i386/linux dest/testing/i386/initrd.gz
 
 dest/testing/i386/linux:network
 	test -d dest/testing/i386 || mkdir -p dest/testing/i386
-	cd dest/testing/i386; wget -Nc $(source)/debian/dists/testing/main/installer-i386/current/images/netboot/debian-installer/i386/linux
+	cd dest/testing/i386; wget -Nc $(source)/debian/dists/unstable/main/installer-i386/current/images/netboot/debian-installer/i386/linux
 
 dest/testing/i386/initrd.gz:network
 	test -d dest/testing/i386 || mkdir -p dest/testing/i386
-	cd dest/testing/i386; wget -Nc $(source)/debian/dists/testing/main/installer-i386/current/images/netboot/debian-installer/i386/initrd.gz
+	cd dest/testing/i386; wget -Nc $(source)/debian/dists/unstable/main/installer-i386/current/images/netboot/debian-installer/i386/initrd.gz
 
 testing-amd64:dest/testing/amd64/linux dest/testing/amd64/initrd.gz
 
 dest/testing/amd64/linux:network
 	test -d dest/testing/amd64 || mkdir -p dest/testing/amd64
-	cd dest/testing/amd64; wget -Nc $(source)/debian/dists/testing/main/installer-amd64/current/images/netboot/debian-installer/amd64/linux
+	cd dest/testing/amd64; wget -Nc $(source)/debian/dists/unstable/main/installer-amd64/current/images/netboot/debian-installer/amd64/linux
 
 dest/testing/amd64/initrd.gz:network
 	test -d dest/testing/amd64 || mkdir -p dest/testing/amd64
-	cd dest/testing/amd64; wget -Nc $(source)/debian/dists/testing/main/installer-amd64/current/images/netboot/debian-installer/amd64/initrd.gz
+	cd dest/testing/amd64; wget -Nc $(source)/debian/dists/unstable/main/installer-amd64/current/images/netboot/debian-installer/amd64/initrd.gz
 
 live:iso_file = $(shell w3m -dump $(source)/debian-cd/current-live/i386/iso-hybrid/ | sed -rn 's/(xfce-desktop.iso)\b[^.].*/\1/p')
 
