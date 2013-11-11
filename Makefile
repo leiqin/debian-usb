@@ -50,7 +50,7 @@ dest/testing/amd64/initrd.gz:network
 	test -d dest/testing/amd64 || mkdir -p dest/testing/amd64
 	cd dest/testing/amd64; wget -Nc $(source)/debian/dists/testing/main/installer-amd64/current/images/netboot/debian-installer/amd64/initrd.gz
 
-live:iso_file = $(shell w3m -dump http://mirrors.163.com/debian-cd/current-live/i386/iso-hybrid/ | sed -rn 's/(xfce-desktop.iso)\b[^.].*/\1/p')
+live:iso_file = $(shell w3m -dump $(source)/debian-cd/current-live/i386/iso-hybrid/ | sed -rn 's/(xfce-desktop.iso)\b[^.].*/\1/p')
 
 live:dest/live
 
@@ -62,7 +62,7 @@ dest/live:download/debian-live-xfce-desktop.iso
 download/debian-live-xfce-desktop.iso:network
 	@echo 'iso_file' $(iso_file)
 	test -d download || mkdir download
-	cd download; wget -Nc http://mirrors.163.com/debian-cd/current-live/i386/iso-hybrid/$(iso_file)
+	cd download; wget -Nc $(source)/debian-cd/current-live/i386/iso-hybrid/$(iso_file)
 	cd download; ln -f $(iso_file) debian-live-xfce-desktop.iso
 
 config-file:dest/syslinux/vesamenu.c32 dest/syslinux/syslinux.cfg dest/isolinux/isolinux.cfg dest/isolinux/vesamenu.c32
