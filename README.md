@@ -2,9 +2,9 @@
 可以用如下命令建立一个 debian 的 Live-usb
 
     make
-    cp -r dest/* /media/usb
+    rsync -av dest/ /media/usb
     syslinux -s /dev/sdb1
-    dd if=/usr/lib/syslinux/mbr.bin of=/dev/sdb
+    dd if=/usr/lib/syslinux/mbr/mbr.bin of=/dev/sdb
 
 如果要制作光盘镜像，可以使用这条命令：
 

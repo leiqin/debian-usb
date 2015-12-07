@@ -70,17 +70,17 @@ download/debian-live-xfce-desktop.iso:network
 
 config-file:dest/syslinux/vesamenu.c32 dest/syslinux/syslinux.cfg dest/isolinux/isolinux.cfg dest/isolinux/vesamenu.c32
 
-dest/syslinux/vesamenu.c32:/usr/lib/syslinux/vesamenu.c32
+dest/syslinux/vesamenu.c32:/usr/lib/syslinux/modules/bios/vesamenu.c32
 	test -d dest/syslinux || mkdir -p dest/syslinux
-	cp -u /usr/lib/syslinux/vesamenu.c32 dest/syslinux
+	cp -u /usr/lib/syslinux/modules/bios/*.c32 dest/syslinux
 
 dest/syslinux/syslinux.cfg:syslinux.cfg
 	test -d dest/syslinux || mkdir -p dest/syslinux
 	cp -u syslinux.cfg dest/syslinux
 
-dest/isolinux/vesamenu.c32:/usr/lib/syslinux/vesamenu.c32
+dest/isolinux/vesamenu.c32:/usr/lib/syslinux/modules/bios/vesamenu.c32
 	test -d dest/isolinux || mkdir -p dest/isolinux
-	cp -u /usr/lib/syslinux/vesamenu.c32 dest/isolinux
+	cp -u /usr/lib/syslinux/modules/bios/*.c32 dest/isolinux
 
 dest/isolinux/isolinux.cfg:syslinux.cfg
 	test -d dest/isolinux || mkdir -p dest/isolinux
