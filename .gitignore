@@ -4,3 +4,4 @@ download
 *.swp
 squashfs-root
 debian/
+ubuntu/

@@ -1,8 +1,6 @@
-http://#source/debian/dists/stable/main/installer-i386/current/images/netboot/debian-installer/i386/linux
-http://#source/debian/dists/stable/main/installer-i386/current/images/netboot/debian-installer/i386/initrd.gz
-http://#source/debian/dists/stable/main/installer-amd64/current/images/netboot/debian-installer/amd64/linux
-http://#source/debian/dists/stable/main/installer-amd64/current/images/netboot/debian-installer/amd64/initrd.gz
-http://#source/debian/dists/unstable/main/installer-i386/current/images/netboot/debian-installer/i386/linux
-http://#source/debian/dists/unstable/main/installer-i386/current/images/netboot/debian-installer/i386/initrd.gz
-http://#source/debian/dists/unstable/main/installer-amd64/current/images/netboot/debian-installer/amd64/linux
-http://#source/debian/dists/unstable/main/installer-amd64/current/images/netboot/debian-installer/amd64/initrd.gz
+#debain_source/debian/dists/stable/main/installer-amd64/current/images/netboot/debian-installer/amd64/linux
+#debain_source/debian/dists/stable/main/installer-amd64/current/images/netboot/debian-installer/amd64/initrd.gz
+#debain_source/debian/dists/unstable/main/installer-amd64/current/images/netboot/debian-installer/amd64/linux
+#debain_source/debian/dists/unstable/main/installer-amd64/current/images/netboot/debian-installer/amd64/initrd.gz
+#ubuntu_source/ubuntu/dists/#ubuntu_version/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/linux
+#ubuntu_source/ubuntu/dists/#ubuntu_version/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/initrd.gz
