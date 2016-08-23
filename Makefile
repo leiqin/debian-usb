@@ -17,7 +17,7 @@ network:
 	mkdir -p download
 	cd download; sed -e 's@#debain_source@$(debain_source)@' -e 's@#ubuntu_source@$(ubuntu_source)@' -e 's@#ubuntu_version@$(ubuntu_version)@' ../download.list | wget -Ncr -nH -i -
 
-stable-amd64:
+stable-amd64:network
 	mkdir -p dest/installer/stable/amd64
 	cp -u download/debian/dists/stable/main/installer-amd64/current/images/netboot/debian-installer/amd64/linux dest/installer/stable/amd64
 	cp -u download/debian/dists/stable/main/installer-amd64/current/images/netboot/debian-installer/amd64/initrd.gz dest/installer/stable/amd64
@@ -26,7 +26,7 @@ stable-amd64:
 
 testing:testing-amd64
 
-testing-amd64:
+testing-amd64:network
 	mkdir -p dest/installer/testing/amd64
 	cp -u download/debian/dists/unstable/main/installer-amd64/current/images/netboot/debian-installer/amd64/linux dest/installer/testing/amd64
 	cp -u download/debian/dists/unstable/main/installer-amd64/current/images/netboot/debian-installer/amd64/initrd.gz dest/installer/testing/amd64
@@ -35,7 +35,7 @@ testing-amd64:
 
 ubuntu:ubuntu-amd64
 
-ubuntu-amd64:
+ubuntu-amd64:network
 	mkdir -p dest/installer/ubuntu/amd64
 	cp -u download/ubuntu/dists/$(ubuntu_version)/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/linux dest/installer/ubuntu/amd64
 	cp -u download/ubuntu/dists/$(ubuntu_version)/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/initrd.gz dest/installer/ubuntu/amd64
