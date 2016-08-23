@@ -12,3 +12,4 @@
 
 In this version of Ubuntu, Dynamic Radeon Drivers are included and activated so that the old solution that you mention does not work.  To operate the old solution you can edit the file /etc/default/grub.  In this file you can add the option radeon.runpm=0 in the call to the current kernel (usually after ro quiet splash).  Alternatively, you can also add radeon.runpm=0 to the value of the variable GRUB\_CMDLINE\_LINUX\_DEFAULT, then save and run sudo update-grub.
 
+[Preparing Files for USB Memory Stick Booting](https://www.debian.org/releases/testing/amd64/ch04s03.html.en)
