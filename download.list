@@ -1,7 +1,4 @@
 #debain_source/debian/dists/stable/main/installer-amd64/current/images/netboot/debian-installer/amd64/linux
 #debain_source/debian/dists/stable/main/installer-amd64/current/images/netboot/debian-installer/amd64/initrd.gz
-#debain_source/debian/dists/unstable/main/installer-amd64/current/images/netboot/debian-installer/amd64/linux
-#debain_source/debian/dists/unstable/main/installer-amd64/current/images/netboot/debian-installer/amd64/initrd.gz
 #ubuntu_source/ubuntu/dists/#ubuntu_version/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/linux
 #ubuntu_source/ubuntu/dists/#ubuntu_version/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/initrd.gz
-http://cdimage.debian.org/cdimage/unofficial/non-free/firmware/unstable/current/firmware.tar.gz

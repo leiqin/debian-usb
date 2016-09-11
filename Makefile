@@ -7,7 +7,7 @@ ubuntu_source = https://mirrors.ustc.edu.cn/
 # ubuntu 16.04
 ubuntu_version = xenial
 
-usb:stable testing ubuntu config-file firmware
+usb:stable ubuntu config-file
 
 # debian stable
 
@@ -21,15 +21,6 @@ stable-amd64:network
 	mkdir -p dest/installer/stable/amd64
 	cp -u download/debian/dists/stable/main/installer-amd64/current/images/netboot/debian-installer/amd64/linux dest/installer/stable/amd64
 	cp -u download/debian/dists/stable/main/installer-amd64/current/images/netboot/debian-installer/amd64/initrd.gz dest/installer/stable/amd64
-
-# debian testing
-
-testing:testing-amd64
-
-testing-amd64:network
-	mkdir -p dest/installer/testing/amd64
-	cp -u download/debian/dists/unstable/main/installer-amd64/current/images/netboot/debian-installer/amd64/linux dest/installer/testing/amd64
-	cp -u download/debian/dists/unstable/main/installer-amd64/current/images/netboot/debian-installer/amd64/initrd.gz dest/installer/testing/amd64
 
 # ubuntu 
 
@@ -65,6 +56,7 @@ dest/isolinux/isolinux.cfg:syslinux.cfg
 firmware:dest/firmware
 
 dest/firmware:download/cdimage/unofficial/non-free/firmware/unstable/current/firmware.tar.gz
+	cd download; wget -Ncr -nH http://cdimage.debian.org/cdimage/unofficial/non-free/firmware/unstable/current/firmware.tar.gz
 	mkdir -p dest/firmware
 	tar -xzvf download/cdimage/unofficial/non-free/firmware/unstable/current/firmware.tar.gz -C dest/firmware
 	touch -r download/cdimage/unofficial/non-free/firmware/unstable/current/firmware.tar.gz dest/firmware
