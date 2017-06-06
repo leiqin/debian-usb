@@ -15,3 +15,12 @@ In this version of Ubuntu, Dynamic Radeon Drivers are included and activated so 
 [Preparing Files for USB Memory Stick Booting](https://www.debian.org/releases/testing/amd64/ch04s03.html.en)
 
 If you want install debian testing check here <https://www.debian.org/devel/debian-installer/>
+
+
+### testing iso image
+
+http://cdimage.debian.org/cdimage/daily-builds/daily/arch-latest/amd64/iso-cd/debian-testing-amd64-netinst.iso
+
+### testing iso image include firmware
+
+https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/daily-builds/sid_d-i/arch-latest/amd64/iso-cd/firmware-testing-amd64-netinst.iso
